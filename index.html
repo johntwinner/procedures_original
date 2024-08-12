@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .collapsible {
+        background-color: #F15423;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        font-weight: bold;
+        }
+
+        .active, .collapsible:hover {
+        background-color: #A6A6A6;
+        }
+
+        .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #F2F1F1;
+        }
+
+	h2 {
+		font-family: Roboto, "Helvetica Neue", sans-serif;
+		font-size: 21 px;
+		font-weight: 700;
+		color: rgba(0,0,0,0.87);
+	}
+        </style>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedures</title>
+</head>
+<body>
+    <button class="collapsible">Start of Class</button>
+    <div class="content">
+        <ul>
+			<li>Be prepared! Bring pencil, paper, charged laptop, etc.</li>
+			<li>Enter room calmly and take your seat</li>
+			<li>Review agenda in Echo</li>
+			<li>Check data box for handouts if you were absent</li>
+			<li>Stow cellphones and other electronic equipment - they will be confiscated otherwise!</li>
+			<li>Be ready to work when class starts: pencils/materials out, seated in your assigned position, backpacks stored <em>under</em> table</li>
+		</ul>
+    </div>
+	<button class="collapsible">Tardy</button>
+    <div class="content">
+		<ul>
+			<li>Provide the instructor with tardy slip <em>without</em> interrupting class</li>
+        </ul>
+    </div>
+    <button class="collapsible">Absent</button>
+    <div class="content">
+		<ul>
+			<li>Review Echo for assignments. Check data box for handouts</li>
+		</ul>
+    </div>
+
+    <button class="collapsible">Behavior</button>
+    <div class="content">
+		<ul>
+			<li>When instructor calls class to attention, stop what you are doing, face him, be quiet & await instructions</li>
+			<li>Plan to use the bathroom outside of class time</li>
+			<li>You must receive instructor's permission to leave class for any reason!</li>
+			<li>Refer to "Polizzi's Principles" for additional info</li>
+			<li>Do not remove anything from instructor's desk/area</li>
+			<li>Raise your hand and wait to be called on when responding</li>
+			<li>"Ask three before me"</li>
+		</ul>
+    </div>
+    <button class="collapsible">Teamwork</button>
+    <div class="content">
+		<ul>
+			<li>Assemble teams promptly when instructed to do so</li>
+			<li>Participate in assigned effort without being disruptive</li>
+			<li>Keep discussions on-topic (Less chat, more churn!</li>
+		</ul>
+    </div>
+    <button class="collapsible">Housekeeping</button>
+    <div class="content">
+		<ul>
+			<li>Do not bring food/drink into classroom or shop area</li>
+			<li>Place trash in trash cans- recycle if possible</li>
+			<li>Notify instructor of any breakage, non-functioning equipment, spills, or injuries</li>
+		</ul>
+    </div>
+    <button class="collapsible">End of Class</button>
+    <div class="content">
+        <ul>
+			<li>The instructor dismisses you, not the clock!</li>
+			<li>Stay seated and quiet until the instructor releases you</li>
+			<li>Verify the area is clean and all materials replaced</li>
+			<li>When released, push chairs in and exit in a controlled manner</li>
+		</ul>
+    </div>
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+</body>
+</html>
